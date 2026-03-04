@@ -1,0 +1,24 @@
+import { Canvas } from "@react-three/fiber";
+import { Center } from "@react-three/drei";
+import { OrbitControls } from "@react-three/drei";
+import { Suspense } from "react";
+import { Model } from "./Scene";
+
+export default function App() {
+  return (
+    <>
+      <Canvas camera={{ position: [0, 1, 5] }}>
+        <ambientLight intensity={0.5} />
+        <directionalLight position={[5, 10, 5]} />
+
+        <Suspense fallback={null}>
+          <Center>
+            <Model />
+          </Center>
+        </Suspense>
+
+        <OrbitControls />
+      </Canvas>
+    </>
+  );
+}
