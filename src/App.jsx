@@ -12,7 +12,14 @@ export default function App() {
         style={{ width: "100vw", height: "100vh" }}
       >
         <ambientLight intensity={0.5} />
-        <directionalLight position={[5, 10, 5]} />
+        {/* <directionalLight position={[5, 10, 5]} /> */}
+        <directionalLight position={[5, 10, 5]} intensity={1} />
+        <directionalLight position={[-5, 5, -5]} intensity={0.6} />
+        <hemisphereLight
+          skyColor="#ffffff"
+          groundColor="#888888"
+          intensity={0.6}
+        />
 
         <Suspense fallback={null}>
           <Center>

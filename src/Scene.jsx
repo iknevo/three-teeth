@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/immutability */
+
 import { useGLTF } from "@react-three/drei";
 import { useLoader } from "@react-three/fiber";
 import * as THREE from "three";
@@ -8,11 +10,11 @@ export function Model(props) {
   // load textures
   const gumsTex = useLoader(
     THREE.TextureLoader,
-    "/models/teeth/textures/Gums_diffuse.png"
+    "/models/teeth/textures/Gums_diffuse.png",
   );
   const tongueTex = useLoader(
     THREE.TextureLoader,
-    "/models/teeth/textures/Tongue_diffuse.png"
+    "/models/teeth/textures/Tongue_diffuse.png",
   );
 
   // GLTF textures need this
