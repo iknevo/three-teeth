@@ -7,7 +7,10 @@ import { Model } from "./Scene";
 export default function App() {
   return (
     <>
-      <Canvas camera={{ position: [0, 1, 5] }}>
+      <Canvas
+        camera={{ position: [0, 1, 5] }}
+        style={{ width: "100vw", height: "100vh" }}
+      >
         <ambientLight intensity={0.5} />
         <directionalLight position={[5, 10, 5]} />
 
